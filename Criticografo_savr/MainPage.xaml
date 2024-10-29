@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Criticografo_savr.MainPage">
+
+    <StackLayout>
+        <Frame BackgroundColor="#feff" Padding="14" CornerRadius="0">
+            <Label Text="Actividad: Criticografo!" HorizontalTextAlignment="Center" TextColor="DarkGray" FontSize="26"/>
+        </Frame>
+        <Entry Placeholder="Nombre" />
+        <Label class="Genero" Text="Genero" HorizontalTextAlignment="Start" FontSize="26"/> 
+       
+
+        <FlexLayout Direction="Row" AlignItems="Start" JustifyContent="Start">
+            <RadioButton FlexLayout.AlignSelf="Auto" Value="Femenino" x:Name="F" IsChecked="False" CheckedChanged="EncambiodeGenero"/>
+            <Label FontSize="20" Text="Femenino" VerticalOptions="Center" HorizontalOptions="Start"/>
+        </FlexLayout>
+
+        <FlexLayout Direction="Row" AlignItems="Start" JustifyContent="Start">
+            <RadioButton FlexLayout.AlignSelf="Auto" Value="Masculino" x:Name="M" IsChecked="False" CheckedChanged="EncambiodeGenero"/>
+            <Label FontSize="20" Text="Masculino" VerticalOptions="Center" HorizontalOptions="Start" />
+        </FlexLayout>
+        
+        <Grid Padding="80">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="25"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="25"/>
+                <ColumnDefinition Width="80"/>
+                <ColumnDefinition Width="25"/>
+                <ColumnDefinition Width="80"/>
+            </Grid.ColumnDefinitions>
+
+            <CheckBox Grid.Row="0" Grid.Column="0" VerticalOptions="Center" Color="Gray" IsChecked="False" x:Name="Boni"></CheckBox>
+            <Label Grid.Row="0" Grid.Column="1" VerticalOptions="Center" Text="Bonito" FontSize="16" IsVisible="true"></Label>
+            <Label Grid.Row="0" Grid.Column="1" VerticalOptions="Center" Text="Bonita" FontSize="16" IsVisible="false"></Label>
+            
+            <CheckBox Grid.Row="0" Grid.Column="2" VerticalOptions="Center" Color="Gray" IsChecked="False" x:Name="Agra"></CheckBox>
+            <Label Grid.Row="0" Grid.Column="3" VerticalOptions="Center"  Text="Agradable" FontSize="16"></Label>
+            
+            <CheckBox Grid.Row="1" Grid.Column="0" VerticalOptions="Center" Color="Gray" IsChecked="False" x:Name="Chis"></CheckBox>
+            <Label Grid.Row="1" Grid.Column="1" VerticalOptions="Center"  Text="Chistoson" FontSize="16" IsVisible="true"></Label>
+            <Label Grid.Row="1" Grid.Column="1" VerticalOptions="Center"  Text="Chistosona" FontSize="16" IsVisible="false"></Label>
+            
+            <CheckBox Grid.Row="1" Grid.Column="2" VerticalOptions="Center" Color="Gray" IsChecked="False" x:Name="Comi"></CheckBox>
+            <Label  Grid.Row="1" Grid.Column="3" VerticalOptions="Center"  Text="Comico" FontSize="16" IsVisible="true"></Label>
+            <Label  Grid.Row="1" Grid.Column="3" VerticalOptions="Center"  Text="Comica" FontSize="16" IsVisible="false"></Label>
+            
+            <CheckBox Grid.Row="2" Grid.Column="0" VerticalOptions="Center" Color="Gray" IsChecked="False" x:Name="Enoj"></CheckBox>
+            <Label  Grid.Row="2" Grid.Column="1" VerticalOptions="Center"  Text="Raro" FontSize="16" IsVisible="true"></Label>
+            <Label  Grid.Row="2" Grid.Column="1" VerticalOptions="Center"  Text="Rara" FontSize="16" IsVisible="false"></Label>
+            
+            <CheckBox Grid.Row="2" Grid.Column="2" VerticalOptions="Center" Color="Gray" IsChecked="False" x:Name="Fea"></CheckBox>
+            <Label  Grid.Row="2" Grid.Column="3" VerticalOptions="Center"  Text="Feo" FontSize="16" IsVisible="true"></Label>
+            <Label  Grid.Row="2" Grid.Column="3" VerticalOptions="Center"  Text="Fea" FontSize="16" IsVisible="false"></Label>
+            
+            <CheckBox Grid.Row="3" Grid.Column="0" VerticalOptions="Center" Color="Gray" IsChecked="False" x:Name="Nolee"></CheckBox>
+            <Label  Grid.Row="3" Grid.Column="1" VerticalOptions="Center"  Text="No lee" FontSize="16"></Label>
+            
+            <CheckBox Grid.Row="3" Grid.Column="2" VerticalOptions="Center" Color="Gray" IsChecked="False" x:Name="Ment"></CheckBox>
+            <Label  Grid.Row="3" Grid.Column="3" VerticalOptions="Center"  Text="Mentiroso" FontSize="16" IsVisible="true"></Label>
+            <Label  Grid.Row="3" Grid.Column="3" VerticalOptions="Center"  Text="Mentirosa" FontSize="16" IsVisible="false"></Label>
+
+
+        </Grid>
+    </StackLayout>
+</ContentPage>
